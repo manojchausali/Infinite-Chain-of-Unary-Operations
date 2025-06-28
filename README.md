@@ -1,9 +1,32 @@
 # Infinite-Chain-of-Unary-Operations
+
+# Overview
+This project demonstrates process creation and management in C using system calls and standard library functions. It simulates an "infinite" chain of unary operations where each operation is executed by a separate process, and the parent-child relationship ensures sequential execution.
+
+## Features
+- Spawns a chain of processes using `fork()`
+- Executes operations using the `exec*()` family
+- Uses `wait()` for process synchronization (parent waits for child)
+- Handles string manipulation, numeric conversion, and mathematical rounding
+- Demonstrates core Unix system programming techniques
+
+## Technologies and Concepts Used
+- **Process Management:** `fork()`, `execvp()`, `wait()`
+- **Synchronization:** Parent waits for child to complete before continuing
+- **String Functions:** `str* family
+- **Formatted I/O:** `printf()`, `sprintf()`
+- **Conversion Functions:** `atoi()`, `atof()`
+- **Math Operations:** `round()` from `<math.h>`
+
+##  What I Learned
+- System Call functions
+- Process synchronization
+- API calls with wrapper functions
+
+# PROJECT SYNOPSIS
 Solution for a problem given in an assignment for subject Operating Systems Principles by IIT Kanpur emaster's degree. In this question, I need to write three c programs defined in Part1/square.c, Part1/double.c and Part1/root.c which perform square, double and square root operations respectively on a non-negative integer such that generated executables with these programs can be chained in any pattern.
 
 The order of the operations in the chained pattern would be from left to right. The program also takes operation offset as an argument; a non-negative integer offset decides which operation to perform first in left to right order, then completes the chain of operations. In the left to right order, the first operation is at offset 0, second operation is at offset 1, third operation is at offset 2, and so on. The value of offset is always less than the total operations specified.
- 
-Synopsis:
 
 $ ./double root double root square integer_number operation_offset
 Example 1
